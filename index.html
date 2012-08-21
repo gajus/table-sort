@@ -20,7 +20,9 @@
 	
 	.authorship { margin-top: 20px; }
 	
-	thead th { text-align: left; }
+	tbody { border-top: 5px solid #fff; }
+	
+	thead th { text-align: left; cursor: pointer; }
 	thead th.sorted-asc:after { content: 'asc'; color: #666; margin-left: 5px; font-weight: normal; }
 	thead th.sorted-desc:after { content: 'desc'; color: #666; margin-left: 5px; font-weight: normal; }
 	</style>
@@ -34,26 +36,36 @@
 	<table>
 		<thead>
 			<tr>
-				<th class="name sorted-asc">Name</th>
-				<th>Age</th>
-				<th>Price</th>
+				<th class="name ay-sort sorted-asc">Name</th>
+				<th class="ay-sort">Age</th>
+				<th class="ay-sort">Price</th>
 			</tr>
 		</thead>
+		<tbody class="ay-sort-no">
+			<tr>
+				<th colspan="3">Rated Best Voice Actor</th>
+			</tr>
+			<tr>
+				<td>Timothy</td>
+				<td>30</td>
+				<td data-ay-weight="90">USD 90.00/hr</td>
+			</tr>
+		</tbody>
 		<tbody>
 			<tr>
 				<td>Ann</td>
 				<td>23</td>
-				<td data-ay-weight="5.0">USD 5.0</td>
+				<td data-ay-weight="50.0">USD 50.0/hr</td>
 			</tr>
 			<tr>
 				<td>Becker</td>
 				<td>20</td>
-				<td data-ay-weight="10.0">USD 10.00</td>
+				<td data-ay-weight="100.0">USD 100.00/hr</td>
 			</tr>
 			<tr>
 				<td>Meg</td>
 				<td>31</td>
-				<td data-ay-weight="10.30">USD 10.30</td>
+				<td data-ay-weight="70.30">USD 70.30/hr</td>
 			</tr>
 		</tbody>
 	</table>

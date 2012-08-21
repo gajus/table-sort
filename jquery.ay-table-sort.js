@@ -1,5 +1,5 @@
 /**
- * jQuery table-sort v0.0.3
+ * jQuery table-sort v0.0.4
  * https://github.com/anuary/jquery-table-sort
  *
  * Licensed under the BSD.
@@ -32,28 +32,30 @@
 				
 				var index	= $(this).data('ay-sort-index') === undefined ? $(this).index() : $(this).data('ay-sort-index');
 				
-				var data	= table.find('tbody').clone();
+				table.find('tbody:not(.ay-sort-no)').each(function(){
+					var data	= $(this).clone();
 				
-				data		= data.find('tr').sort(function(a, b)
-				{
-					var a	= $(a).find('td').eq(index);
-					var b	= $(b).find('td').eq(index);
-					
-					var a	= a.data('ay-sort-weight') === undefined ? a.text() : a.data('ay-sort-weight');
-					var b	= b.data('ay-sort-weight') === undefined ? b.text() : b.data('ay-sort-weight');
-					
-					var a	= !isNaN(parseFloat(a)) ? parseFloat(a) : a;
-					var b	= !isNaN(parseFloat(b)) ? parseFloat(b) : b;
-					
-					if(a == b)
+					data		= data.find('tr').sort(function(a, b)
 					{
-						return 0;
-					}
+						var a	= $(a).find('td').eq(index);
+						var b	= $(b).find('td').eq(index);
+						
+						var a	= a.data('ay-sort-weight') === undefined ? a.text() : a.data('ay-sort-weight');
+						var b	= b.data('ay-sort-weight') === undefined ? b.text() : b.data('ay-sort-weight');
+						
+						var a	= !isNaN(parseFloat(a)) ? parseFloat(a) : a;
+						var b	= !isNaN(parseFloat(b)) ? parseFloat(b) : b;
+						
+						if(a == b)
+						{
+							return 0;
+						}
+						
+						return (sort ? a > b : a < b) ? -1 : 1;
+					});
 					
-					return (sort ? a > b : a < b) ? -1 : 1;
+					$(this).html(data);
 				});
-				
-				table.find('tbody').html(data);
 			});
 		});
 	};
