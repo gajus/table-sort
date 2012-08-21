@@ -1,5 +1,5 @@
 /**
- * jQuery table-sort v0.0.1
+ * jQuery table-sort v0.0.3
  * https://github.com/anuary/jquery-table-sort
  *
  * Licensed under the BSD.
@@ -12,9 +12,10 @@
 		this.each(function(){
 			var table	= $(this);
 			
-			table.find('thead th.ay-sort)').on('click', function()
+			table.find('thead th.ay-sort').on('click', function()
 			{
-				$(this).siblings().removeClass('ay-sort-asc ay-sort-desc');
+				// Cannot use .siblings() because th might be not under the same <tr>
+				$(this).parents('thead').find('th').not($(this)).removeClass('ay-sort-asc ay-sort-desc');
 				
 				if($(this).hasClass('ay-sort-asc'))
 				{
