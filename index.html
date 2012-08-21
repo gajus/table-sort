@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="jquery.ay-table-sort.js"></script>
+	
+	<style>
+	html, body { margin: 0; font: 12px/20px monospace; }
+	
+	body { padding: 20px; }
+	
+	table { table-layout: fixed; border-collapse: collapse; width: 100%; }
+	thead { background: #b9c9fe; }
+	td,th { padding: 5px; }
+	tbody tr { border-top: 1px solid #fff; background: #e8edff; }
+	
+	th.name { width: 200px; }
+	
+	a { color: #f00; text-decoration: underline; }
+	
+	.authorship { margin-top: 20px; }
+	
+	thead th { text-align: left; }
+	thead th.sorted-asc:after { content: 'asc'; color: #666; margin-left: 5px; font-weight: normal; }
+	thead th.sorted-desc:after { content: 'desc'; color: #666; margin-left: 5px; font-weight: normal; }
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+	$(function(){
+		$('table').ayTableSort();
+	});
+	</script>
+	<table>
+		<thead>
+			<tr>
+				<th class="name sorted-asc">Name</th>
+				<th>Age</th>
+				<th>Price</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Ann</td>
+				<td>23</td>
+				<td data-ay-weight="5.0">USD 5.0</td>
+			</tr>
+			<tr>
+				<td>Becker</td>
+				<td>20</td>
+				<td data-ay-weight="10.0">USD 10.00</td>
+			</tr>
+			<tr>
+				<td>Meg</td>
+				<td>31</td>
+				<td data-ay-weight="10.30">USD 10.30</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="authorship">
+		This is a demo of a <a href="https://github.com/anuary/jquery-table-sort" target="_blank">jQuery plugin table-sort</a>. This script has been developed by <a href="http://anuary.com/gajus" target="_blank">Gajus Kuizinas</a>.
+	</div>
+</body>
+</html>
