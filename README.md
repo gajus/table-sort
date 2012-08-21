@@ -1,12 +1,12 @@
 # jQuery table-sort plugin
 
-[jQuery table-sort plugin](https://github.com/anuary/jquery-table-sort/) ([demonstration](https://dev.anuary.com/b2f9b84e-11b9-5d84-818e-053fcc313c0d/)) is a jQuery plugin to sort tables by `td` content, `data-ay-weight`, or a mix of both.
+[jQuery table-sort plugin](https://github.com/anuary/jquery-table-sort/) ([demonstration](https://dev.anuary.com/b2f9b84e-11b9-5d84-818e-053fcc313c0d/)) is a jQuery plugin to sort tables by `td` content or `data-ay-weight`, if the latter is provided.
 
-The script will add `ay-sorted-asc` and `ay-sorted-desc` to the corresponding `th`.
+The script will add `ay-sort-asc` and `ay-sort-desc` to the corresponding `th`.
 
 ## Usage
 
-`ayTableSort` does not take any arguments. Every column is sorted by default. This might change in the next release. Furthermore, if you require initial sorting on page load, then such should be done on server side and (optionally) the approriate class referencing the sorting added to the corresponding `th`.
+`ayTableSort` does not take any arguments. Sortable `th` are indicated `ay-sort` class. By default, nothing is sortable. Furthermore, if you require initial sorting on a page load, then such should be done on server side and (optionally) the approriate class referencing the sorting added to the corresponding `th`.
 
     <script type="text/javascript">
     $(function(){
@@ -16,9 +16,9 @@ The script will add `ay-sorted-asc` and `ay-sorted-desc` to the corresponding `t
     <table>
     	<thead>
     		<tr>
-    			<th class="name sorted-asc">Name</th>
-    			<th>Age</th>
-    			<th>Price</th>
+    			<th class="ay-sort name sorted-asc">Name</th>
+    			<th class="ay-sort">Age</th>
+    			<th class="ay-sort">Price</th>
     		</tr>
     	</thead>
     	<tbody>
@@ -43,7 +43,6 @@ The script will add `ay-sorted-asc` and `ay-sorted-desc` to the corresponding `t
 ## Roadmap
 
 * Add initial sorting.
-* Allow to whitelist sotable columns.
 
 ## License & Notes
 

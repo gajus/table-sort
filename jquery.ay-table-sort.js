@@ -11,20 +11,20 @@
 	$.fn.ayTableSort	= function(){
 		this.each(function(){
 			var table	= $(this);
-		
-			table.find('thead th').on('click', function()
+			
+			table.find('thead th.ay-sort)').on('click', function()
 			{
-				$(this).siblings().removeClass('sorted-asc sorted-desc');
+				$(this).siblings().removeClass('ay-sort-asc ay-sort-desc');
 				
-				if($(this).hasClass('sorted-asc'))
+				if($(this).hasClass('ay-sort-asc'))
 				{
-					$(this).removeClass('sorted-asc').addClass('sorted-desc');
+					$(this).removeClass('ay-sort-asc').addClass('ay-sort-desc');
 					
 					var sort	= 1;
 				}
 				else
 				{
-					$(this).removeClass('sorted-desc').addClass('sorted-asc');
+					$(this).removeClass('ay-sort-desc').addClass('ay-sort-asc');
 					
 					var sort	= 0;
 				}				
