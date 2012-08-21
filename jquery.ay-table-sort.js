@@ -30,7 +30,7 @@
 					var sort	= 0;
 				}				
 				
-				var index	= $(this).index();
+				var index	= $(this).data('ay-sort-index') === undefined ? $(this).index() : $(this).data('ay-sort-index');
 				
 				var data	= table.find('tbody').clone();
 				
@@ -39,8 +39,8 @@
 					var a	= $(a).find('td').eq(index);
 					var b	= $(b).find('td').eq(index);
 					
-					var a	= a.data('ay-weight') === undefined ? a.text() : a.data('ay-weight');
-					var b	= b.data('ay-weight') === undefined ? b.text() : b.data('ay-weight');
+					var a	= a.data('ay-sort-weight') === undefined ? a.text() : a.data('ay-sort-weight');
+					var b	= b.data('ay-sort-weight') === undefined ? b.text() : b.data('ay-sort-weight');
 					
 					var a	= !isNaN(parseFloat(a)) ? parseFloat(a) : a;
 					var b	= !isNaN(parseFloat(b)) ? parseFloat(b) : b;
