@@ -1,5 +1,5 @@
 /**
- * jQuery table-sort v0.0.4
+ * jQuery table-sort v0.0.5
  * https://github.com/anuary/jquery-table-sort
  *
  * Licensed under the BSD.
@@ -34,7 +34,9 @@
 				
 				table.find('tbody:not(.ay-sort-no)').each(function(){
 					var data	= $(this).clone();
-				
+					
+					var removed	= data.find('tr').has('[colspan]').remove();
+					
 					data		= data.find('tr').sort(function(a, b)
 					{
 						var a	= $(a).find('td').eq(index);
@@ -55,6 +57,8 @@
 					});
 					
 					$(this).html(data);
+					
+					removed.insertBefore(data.eq(0));
 				});
 			});
 		});
