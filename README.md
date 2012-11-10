@@ -1,6 +1,6 @@
 # jQuery table-sort plugin
 
-[jQuery table-sort plugin](https://github.com/anuary/jquery-table-sort/) ([demonstration](https://dev.anuary.com/b2f9b84e-11b9-5d84-818e-053fcc313c0d/)) is a jQuery plugin to sort tables by `td` content or `data-ay-sort-weight`, if the latter is provided.
+[jQuery table-sort plugin](https://github.com/anuary/ay-table-sort/) ([demonstration](https://dev.anuary.com/b2f9b84e-11b9-5d84-818e-053fcc313c0d/)) is a jQuery plugin to sort tables by `td` content or `data-ay-sort-weight`, if the latter is provided.
 
 The script will add `ay-sort-asc` and `ay-sort-desc` to the corresponding `th`.
 
