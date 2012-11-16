@@ -50,7 +50,7 @@
 		</tbody>
 	</table>
 	<div class="authorship">
-		This is a demo of a <a href="https://github.com/anuary/jquery-table-sort" target="_blank">jQuery table-sort plugin</a>. This script has been developed by <a href="http://anuary.com/gajus" target="_blank">Gajus Kuizinas</a>.
+		This is a demo of a <a href="https://github.com/gajus/table-sort" target="_blank">jQuery table-sort plugin</a>.
 	</div>
 </body>
 </html>
