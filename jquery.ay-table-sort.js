@@ -1,5 +1,5 @@
 /**
- * jQuery table-sort v0.1.0
+ * jQuery table-sort v0.1.1
  * https://github.com/gajus/table-sort
  *
  * Licensed under the BSD.
@@ -35,7 +35,7 @@
 					var data		= e.dataset.aySortWeight;
 					
 					if (data === undefined) {
-						var data	= e.innerHTML;
+						var data	= e.textContent || e.innerText;
 					}
 					
 					var number	= parseFloat(data);
