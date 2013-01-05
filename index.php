@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script type="text/javascript" src="jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="jquery.ay-table-sort.js"></script>
 	
 	<style>
@@ -30,7 +30,7 @@
 <body>
 	<script type="text/javascript">
 	$(function(){
-		$('table').ayTableSort({debug: true});
+		$.ay.tableSort({target: $('table'), debug: true});
 	});
 	</script>
 	<table>
