@@ -6,7 +6,7 @@ The script will add `ay-sort-asc` and `ay-sort-desc` to the corresponding `th`.
 
 ## Usage
 
-`ayTableSort` does not take any arguments. Sortable `th` need to have `ay-sort` class. By default, nothing is sortable.
+Sortable `th` need to have `ay-sort` class. By default, nothing is sortable.
 
 `th` has an optional `data-ay-sort-index` attribute to specify the sortable column index in `tbody` (zero-based). If table data is formatted (e.g. "USD 20.00", "10 cm") you need to explicitly state the sortable value using `data-ay-sort-weight` `td` attribute. If table has more than one `tbody` you can exclude the `tbody` you don't want sort by adding `ay-sort-no` class.
 
@@ -14,7 +14,7 @@ Furthermore, if you require initial sorting on a page load, then such should be 
 
         <script type="text/javascript">
     $(function(){
-    	$('table').ayTableSort();
+    	$.ay.tableSort({target: $('table'), debug: false});
     });
     </script>
     <table>
