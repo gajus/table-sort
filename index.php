@@ -44,7 +44,7 @@
 			<?php for($i = 0; $i < 1000; $i++):?>
 			<tr>
 				<td><?=mt_rand(0,99999)?></td>
-				<td><?=mt_rand(0,99999)?></td>
+				<td><?=substr(md5(rand()), 0, 10);?></td>
 			</tr>
 			<?php endfor;?>
 		</tbody>
